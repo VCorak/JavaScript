@@ -24,9 +24,9 @@ const writeTitle = title => {
 };
 
 const uCFirst = sentence => {
-  const words = sentence.split(``);
-  words = words.map(word => word.charAt(0).toUpperCase() + word.slice());
-  return words.join();
+ // const show = sentence.toLowerCase().split('');
+  //const firstLetter = show.map(s => s.charAt(0).toUpperCase() + s.slice(1));
+  return sentence.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
 };
 
 document.write(`<ol>`);
