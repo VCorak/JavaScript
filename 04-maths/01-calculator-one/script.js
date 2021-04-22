@@ -12,19 +12,33 @@
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
 
+    function getNumbers(){
+      operandOne = parseInt(document.getElementById("op-one").value);
+      operandTwo = parseInt(document.getElementById("op-two").value);
+    };
+
+
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
+        getNumbers();
+        alert(operandOne + operandTwo);
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
+        getNumbers();
+        alert(operandOne - operandTwo);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
+        getNumbers();
+        alert(operandOne * operandTwo);
     });
 
     document.getElementById("division").addEventListener("click", function() {
         // perform an division
+        getNumbers();
+        alert(operandOne / operandTwo);
     });
 })();

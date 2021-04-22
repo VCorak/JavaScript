@@ -12,13 +12,39 @@
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
 
-    var performOperation = function(operation) {
-        // perform the operation
-    };
+
+
+    const performOperation = function(operation) {
+
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+
+    switch (operation) {
+        case "addition": {
+            alert(opOne + opTwo);
+            break;
+        }
+        case "substraction": {
+            alert(opOne - opTwo);
+            break;
+        }
+        case "multiplication": {
+            alert(opOne * opTwo);
+            break;
+        }
+        case "division": {
+            alert(opOne / opTwo);
+            break;
+        }
+
+    }};
+
+
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
         $btn.addEventListener("click", function() {
             performOperation($btn.id);
         });
     });
+
 })();
