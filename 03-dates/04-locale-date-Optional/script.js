@@ -13,6 +13,14 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+
+   // const event = new Date();
+   // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+   // const time = event.toLocaleTimeString('en-US');
+   // document.getElementById("target").innerHTML = event.toLocaleDateString('en-US', options)
+    //  + time;
+
+    document.getElementById("target").innerHTML = new Date().toUTCString()
 
 })();
+

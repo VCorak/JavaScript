@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+
+    document.getElementById("run").addEventListener("click", event => {
+        const dobDay = document.getElementById("dob-day").value;
+        const dobMonth = document.getElementById("dob-month").value;
+        const dobYear = document.getElementById("dob-year").value;
+        const formatDob = dobMonth + "/" + dobDay + "/" +dobYear;
+
+        const dateToday = new Date();
+        const dateOfBirth = new Date(formatDob);
+
+
+        const visitor = dateToday.getTime() - dateOfBirth.getTime();
+        const age = Math.floor(visitor / 1000 / 60 / 60 /24/365.25);
+
+
+        document.getElementById("write").innerHTML = age;
+
+    })
+
 
 })();
