@@ -26,6 +26,12 @@
         "cherry",
     ];
 
-    // your code here
+    //document.getElementById("run").addEventListener("click", () => {
+       // console.log(fruits[3]);
+   // }); THIS IS SHORTER WAY FROM EXAMPLE BELLOW
 
+    const getFruits = (fruits) => {
+        document.getElementById("run").addEventListener("click", getFruits);
+    }
+    console.log(fruits[3]); // THIS IS LONGER WAY
 })();

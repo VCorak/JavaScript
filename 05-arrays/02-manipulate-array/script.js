@@ -24,6 +24,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.shift(); // remove first element, pomme
+        fruits.pop(); // remove last element, cerise
+        fruits.unshift("banana"); // add element banana at the start
+        fruits.push("kiwi"); // add element kiwi at the end
+
+        console.log(fruits);
+    })
 
 })();

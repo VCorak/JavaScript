@@ -89,6 +89,16 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
 
+        const reducer = (ages, currentValue) => ages + currentValue.age;
+
+        const ages = people.reduce(reducer, 0);
+        console.log(ages);
+
+    });
 })();
+
+
+
+
