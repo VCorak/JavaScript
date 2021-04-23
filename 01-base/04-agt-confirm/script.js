@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+        let confirmation= true;
+        while(confirmation === true) {
+        const age = prompt("What is your age?");
+        const gender = prompt("What is your sex? (male/neutral/female)");
+        const town = prompt("What is your hometown?");
 
-    // your code here
+        let question = confirm(`
+    ${age} 
+    ${gender}
+    ${town}`);
 
+    if (question) {
+    confirmation = false;
+}
+    }
 })();
