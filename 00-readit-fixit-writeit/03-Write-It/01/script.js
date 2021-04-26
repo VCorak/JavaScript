@@ -6,14 +6,12 @@
 
     ];
 
-    let list = document.getElementById("list");
-
-    films.forEach((item)=>{
-        let li = document.createElement("li");
-        li.innerText = item;
-        list.appendChild(li);
-    })
-
+    for (i = 0; i < films.length; i++)
+    {
+        document.write("<ul>");
+        document.write("<li>" + films[i] + "</li>");
+        document.write("</ul>");
+    }
 
 
 })();
