@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    const myImage = new Image();
+    myImage.src = 'http://www.randomkittengenerator.com/cats/rotator.php';
+    document.querySelector('figure').appendChild(myImage);
+
+    const el = document.getElementById('source');
+    el.remove();
+
+
+
+
+
+
+
+
+
+
+
+
 
 })();
