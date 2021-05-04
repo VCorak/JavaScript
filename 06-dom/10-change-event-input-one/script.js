@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("pass-one").addEventListener("input", function () {
+        let passOne = document.getElementById("pass-one");
+        let maxChar = 10;
+
+        if (passOne.value.length > maxChar) {
+            passOne.value = passOne.value.substr(0, maxChar);
+        }
+    });
 
 })();
+
