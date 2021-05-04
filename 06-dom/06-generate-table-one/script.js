@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    let targetVar = document.getElementById("target");
+    let newTable = document.createElement("table");
+
+    for (let i = 0; i < 9; i++) {
+        let newRow = newTable.insertRow(i);
+        let cell1 = newRow.insertCell(0);
+
+        cell1.innerHTML = "test";
+        targetVar.appendChild(newTable);
+    }
 
 })();
