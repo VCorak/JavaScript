@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    function getInputValue() {
+
+        document.getElementById('run').addEventListener('click', () => {
+            let input = document.getElementById("hero-id").value;
+
+            fetch('http://localhost:8000/_shared/api.json',{ input : id})
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data.heroes);
+                    const list = data.heroes.map(heroes => {
+                        return `<li>Name: ${heroes.name}</li>`
+                    })
+                    document.querySelector('#target')
+                        .insertAdjacentHTML("afterbegin", list);
+                })
+        })
+    }
+    getInputValue();
+    // When you click on the button,
+    // get the id from the form, then
+    // get the corresponding X-Men from
+    // the API and display it in the tag whose id
+    // is "target". Use the tag <strong>template</strong> to
+    // reproduce a suitable html structure.
 })();
